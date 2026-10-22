@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Твое Имя</title>
+    <style>
+        /* Общие стили и переменные */
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Шапка профиля */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--card-bg);
+        }
+
+        .profile-emoji {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            animation: wave 2s infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Секции */
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Карточки и списки */
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        /* Навыки (Теги) */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Ссылки / Контакты */
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Анимация для эмодзи */
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Шапка -->
+        <header>
+            <div class="profile-emoji">🕺</div>
+            <h1>[Виталий Галачиев]</h1>
+            <p class="subtitle">[Студент ПИКИ 1 курс]</p>
+        </header>
+
+        <!-- О себе -->
+        <section>
+            <h2>ℹ️ О себе</h2>
+            <p>Увлекаюсь программированием и компьютерами.</p>
+        </section>
+
+        <!-- Навыки -->
+        <section>
+            <h2>⚡ Навыки</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Разработка игр на GODOT</span>
+                <span class="skill-tag">Сборка компьютера</span>
+                <span class="skill-tag">Игра на электрогитаре</span>
+                <span class="skill-tag">Игра на фортепиано</span>
+            </div>
+        </section>
+
+        <!-- Опыт / Достижения -->
+        <section>
+            <h2>💼 Опыт и достижения</h2>
+            
+            <div class="card">
+                <h3>[Программирование и инжиниринг компьютерных игр / ВШЭ СПб]</h3>
+                <p class="date">Сентябрь 2026 — По настоящее время</p>
+                <p>Изучаю математику и программирование, чтобы стать геймдев разработчиком.</p>
+            </div>
+
+            <div class="card">
+                <h3>[Bone Breaker]</h3>
+                <p class="date">Январь 2025</p>
+                <p>Собственная 2D игра на GODOT Engine в жанре roguelike</p>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section style="text-align: center;">
+            <h2>📬 Контакты</h2>
+            <p>Свяжитесь со мной удобным для вас способом:</p>
+            <div class="contacts">
+                <a href="mailto:[vigalachiev@edu.hse.ru]" class="btn">Email</a>
+                <a href="https://t.me[xalen1x]" class="btn" style="background-color: #22c55e;">Telegram</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
