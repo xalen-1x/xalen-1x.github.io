@@ -4,354 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitaliy Galachiev | Portfolio</title>
-    <!-- Подключение шрифтов для эстетики кода -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-main: #0d1117;
-            --bg-card: #161b22;
-            --bg-card-hover: #1c2128;
-            --border-color: #30363d;
-            --text-primary: #e6edf3;
-            --text-secondary: #8b949e;
-            
-            /* Цвета подсветки синтаксиса */
-            --syntax-cyan: #58a6ff;
-            --syntax-green: #3fb950;
-            --syntax-purple: #bc8cff;
-            --syntax-orange: #ffa657;
-            --syntax-red: #ff7b72;
-            --syntax-yellow: #d29922;
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="terminal-window">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="terminal-title mono">vitaliy@hse-spb: ~/portfolio</div>
+                <div style="width: 44px;"></div>
+            </div>
+            <div class="terminal-body">
+                <div class="cmd-line mono"><span>$</span> whoami --verbose</div>
+                <h1>Виталий Галачиев<span class="cursor"></span></h1>
+                <p class="subtitle">Студент ПИКИ, 1 курс <span class="comment">// GameDev &amp; C++ Enthusiast</span></p>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-header">
+                <span class="sec-index">01</span>
+                <h2><span class="fn">cat</span> <span class="str">about_and_interests.json</span></h2>
+            </div>
+
+            <div class="code-block">
+                <div class="code-line"><span class="punct">{</span></div>
+                <div class="code-line indent"><span class="key">"about"</span><span class="punct">:</span> <span class="string">"Увлекаюсь разработкой игр, низкоуровневым программированием и архитектурой ПК."</span><span class="punct">,</span></div>
+                <div class="code-line indent"><span class="key">"university"</span><span class="punct">:</span> <span class="string">"НИУ ВШЭ — Санкт-Петербург (ПИКИ)"</span></div>
+                <div class="code-line"><span class="punct">}</span></div>
+            </div>
+
+            <div class="interest-grid">
+                <div class="interest-card">
+                    <div class="interest-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span>// Разработка</span>
+                    </div>
+                    <p>Создание игр на <strong>Godot Engine</strong>, программирование на <strong>C++</strong>, математика и сборка/настройка железа.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="stroke: var(--syntax-red);"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                        <span>// Heavy Metal &amp; Звук</span>
+                    </div>
+                    <p>Играю на <strong>электрогитаре</strong> и <strong>фортепиано</strong>. Слушаю хеви-метал и пауэр-метал:</p>
+                    <div>
+                        <span class="band-badge">&lt;Sabaton /&gt;</span>
+                        <span class="band-badge">&lt;Powerwolf /&gt;</span>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="stroke: var(--syntax-purple);"><rect x="2" y="6" width="20" height="12" rx="2"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg>
+                        <span>// Игры и Киберспорт</span>
+                    </div>
+                    <p>Слежу за киберспортом и играю в <strong>CS2</strong>, <strong>Valorant</strong>, <strong>MLBB</strong>, а также прохожу крупные <strong>AAA-проекты</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <span class="sec-index">02</span>
+                <h2><span class="fn">skills</span>.<span class="str">preload()</span></h2>
+            </div>
+            <div class="skills-container">
+                <span class="skill-tag">Godot Engine (2D / GDScript)</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Сборка и настройка ПК</span>
+                <span class="skill-tag">Электрогитара</span>
+                <span class="skill-tag">Фортепиано</span>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <span class="sec-index">03</span>
+                <h2><span class="fn">git log</span> <span class="flag">--experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Программирование и инжиниринг компьютерных игр / ВШЭ СПб</h3>
+                        <span class="date">Сентябрь 2026 — н.в.</span>
+                    </div>
+                    <p>Изучаю высшую математику, алгоритмы и разработку ПО, чтобы создавать качественные игры и игровые движки.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Проект: Bone Breaker</h3>
+                        <span class="date">Январь 2025</span>
+                    </div>
+                    <p>Собственная 2D-игра на <strong>Godot Engine</strong> в жанре roguelike: проектирование игровых механик, боевой системы и логики уровней.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <span class="sec-index">04</span>
+                <h2><span class="fn">./connect.sh</span> <span class="flag">--now</span></h2>
+            </div>
+            <div class="contacts-box">
+                <p>Открыт к общению по поводу совместных геймдев-проектов, учебы или музыки:</p>
+                <div class="contacts">
+                    <a href="mailto:vigalachiev@edu.hse.ru" class="btn btn-email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        Email
+                    </a>
+                    <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="btn btn-tg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        Telegram (@xalen1x)
+                    </a>
+                    <button type="button" class="btn btn-copy" id="copyEmailBtn" onclick="copyEmail()">
+                        Копировать почту
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            // Built with clean HTML &amp; CSS • Vitaliy Galachiev
+        </footer>
+    </main>
+
+    <script>
+        function copyEmail() {
+            const email = "vigalachiev@edu.hse.ru";
+            navigator.clipboard.writeText(email).then(() => {
+                const btn = document.getElementById("copyEmailBtn");
+                const originalText = btn.textContent;
+                btn.textContent = "✓ Скопировано!";
+                btn.style.borderColor = "#3fb950";
+                btn.style.color = "#3fb950";
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.borderColor = "";
+                    btn.style.color = "";
+                }, 2000);
+            });
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-main);
-            background-image: 
-                radial-gradient(rgba(88, 166, 255, 0.06) 1px, transparent 1px);
-            background-size: 24px 24px;
-            color: var(--text-primary);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            padding: 30px 20px;
-        }
-
-        .mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        /* Окно терминала в шапке */
-        .terminal-window {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-            margin-bottom: 48px;
-        }
-
-        .terminal-header {
-            background-color: #010409;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .window-controls {
-            display: flex;
-            gap: 8px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        .dot-red { background-color: #ff5f56; }
-        .dot-yellow { background-color: #ffbd2e; }
-        .dot-green { background-color: #27c93f; }
-
-        .terminal-title {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-
-        .terminal-body {
-            padding: 28px 32px;
-        }
-
-        .cmd-line {
-            color: var(--syntax-green);
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-
-        .cmd-line span {
-            color: var(--text-secondary);
-        }
-
-        h1 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 2.3rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 1.9rem;
-            background-color: var(--syntax-cyan);
-            vertical-align: middle;
-            margin-left: 6px;
-            animation: blink 1.1s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .subtitle {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.05rem;
-            color: var(--syntax-cyan);
-        }
-
-        .subtitle .comment {
-            color: var(--text-secondary);
-        }
-
-        /* Необычные заголовки секций */
-        section {
-            margin-bottom: 48px;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 1px dashed var(--border-color);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .sec-index {
-            background-color: rgba(88, 166, 255, 0.12);
-            color: var(--syntax-cyan);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border: 1px solid rgba(88, 166, 255, 0.3);
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        h2 .fn { color: var(--syntax-purple); }
-        h2 .str { color: var(--syntax-orange); }
-        h2 .flag { color: var(--syntax-green); }
-
-        /* Секция "О себе" в стиле JSON/Code блока */
-        .code-block {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px 24px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.92rem;
-            overflow-x: auto;
-        }
-
-        .code-line {
-            margin-bottom: 8px;
-        }
-        .code-line:last-child { margin-bottom: 0; }
-
-        .indent { padding-left: 22px; }
-        .key { color: var(--syntax-cyan); }
-        .string { color: var(--syntax-orange); }
-        .punct { color: var(--text-secondary); }
-
-        .interest-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .interest-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 18px;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-
-        .interest-card:hover {
-            border-color: var(--syntax-cyan);
-            transform: translateY(-2px);
-        }
-
-        .interest-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        .interest-title svg {
-            width: 18px;
-            height: 18px;
-            stroke: var(--syntax-cyan);
-            flex-shrink: 0;
-        }
-
-        .interest-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .band-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(255, 123, 114, 0.1);
-            border: 1px solid rgba(255, 123, 114, 0.3);
-            color: var(--syntax-red);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            margin-top: 6px;
-            margin-right: 4px;
-        }
-
-        /* Навыки (Теги) */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-tag {
-            background-color: var(--bg-card);
-            color: var(--text-primary);
-            padding: 9px 16px;
-            border-radius: 6px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.88rem;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-        }
-
-        .skill-tag::before {
-            content: "#";
-            color: var(--syntax-green);
-            font-weight: bold;
-        }
-
-        .skill-tag:hover {
-            border-color: var(--syntax-green);
-            background-color: var(--bg-card-hover);
-        }
-
-        /* Опыт и достижения (Git-лог стиль) */
-        .timeline {
-            position: relative;
-            padding-left: 24px;
-            border-left: 2px solid var(--border-color);
-        }
-
-        .card {
-            position: relative;
-            background-color: var(--bg-card);
-            padding: 20px 24px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-            transition: border-color 0.2s;
-        }
-
-        .card:last-child {
-            margin-bottom: 0;
-        }
-
-        .card:hover {
-            border-color: var(--syntax-purple);
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            left: -31px;
-            top: 24px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--bg-main);
-            border: 2px solid var(--syntax-purple);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .card h3 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.05rem;
-            color: #fff;
-        }
-
-        .date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--syntax-green);
-            background-color: rgba(63, 185, 80, 0.1);
-            border: 1px solid rgba(63, 185, 80, 0.25);
-            padding: 2px 10px;
-            border-radius: 12px;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* Контакты */
-        .contacts-box {
-            background-color: var(--bg-card);
+    </script>
+</body>
+</html>
